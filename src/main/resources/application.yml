@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  #servelet:
+   # context-path: /api
+
+# Spring configuration
+spring:
+  main:
+    web-application-type: servlet
+  datasource: # DATA SOURCE - Set configurations for the database connection
+    url: jdbc:postgresql://localhost:5332/managementsys
+    username: yaashall
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: create-drop # create-drop: drop the schema and recreate it on restart, update: update the schema, validate: validate the schema, none: do nothing
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true # Pretty print the SQL in the log
+    show-sql: true # Show or not log for each SQL query
+    #open-in-view: false  Disable the automatic session flush
+
+
+
